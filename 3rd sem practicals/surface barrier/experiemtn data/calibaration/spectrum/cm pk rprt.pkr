@@ -1,0 +1,13 @@
+		PHAST PEAK REPORT
+File      	hardware
+Sample    	sample
+Date      	28/10/2021
+Time      	15:20:40
+Live      	1000
+CG        	4 K
+Dead Time(%)	0.1
+HWLT:1000	CRLT:1000	RT:1000
+Energy Calibration Parameters	2.74157 + 1.94035 * X + 0 * X * X
+
+
+Tag       PKEn      FWHMEn    PkChnl    FWHMCh    Area      FSig      Backgnd   CPS       
