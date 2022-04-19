@@ -3,6 +3,7 @@ Packages for plotting and other stuff
 version: 5.0
 author: Riasat
 """
+# uncomment the below line to use interactive plots
 # %matplotlib widget
 
 # data loading
@@ -93,3 +94,20 @@ def cur_fit(x, y):
     xx = np.arange(x[0], x[len(x) - 1], 0.001)
     yy = func(xx, *popt)
     return xx, yy
+
+
+def estimate_coef(x, y):
+    # number of observations/points
+    n = np.size(x)
+    # mean of x and y vector
+    m_x = np.sum(x)
+    m_y = np.sum(y)
+    # calculating cross-deviation and deviation about x
+    SS_xy = np.sum(y * x)
+    SS_xx = np.sum(x * x)
+    deno = n * SS_xx - m_x * m_x
+    # calculating regression coefficients
+    b = (n * SS_xy - m_x * m_y) / deno
+    a = (m_y * SS_xx - m_x * SS_xy) / deno
+
+    return (a, b)
