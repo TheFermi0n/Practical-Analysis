@@ -395,7 +395,7 @@
 \subsection{Functions}\label{functions}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{56}{\boxspacing}
+\prompt{In}{incolor}{1}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} \PYZpc{}load ../../setup.py}
 \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}}
@@ -518,7 +518,7 @@
 \subsection{Data}\label{data}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{57}{\boxspacing}
+\prompt{In}{incolor}{2}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{file\PYZus{}name} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{data\PYZus{}surface.xlsx}\PY{l+s+s2}{\PYZdq{}}
 \PY{n}{res\PYZus{}name} \PY{o}{=} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Am\PYZhy{}241}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Pu\PYZhy{}239}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Cm\PYZhy{}244}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
@@ -550,7 +550,7 @@
 \subsection{Calibration}\label{calibration}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{58}{\boxspacing}
+\prompt{In}{incolor}{3}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} extrapolated points}
 \PY{n}{peak\PYZus{}channel\PYZus{}fit}\PY{p}{,} \PY{n}{known\PYZus{}energy\PYZus{}fit} \PY{o}{=} \PY{n}{polfit}\PY{p}{(}\PY{n}{peak\PYZus{}channel}\PY{p}{,} \PY{n}{known\PYZus{}energy}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
@@ -585,7 +585,7 @@
 \subsection{FWHM}\label{fwhm}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{59}{\boxspacing}
+\prompt{In}{incolor}{4}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} air energy from calibration curve}
 \PY{n}{peak\PYZus{}energy\PYZus{}air} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{interp}\PY{p}{(}\PY{n}{air\PYZus{}peak}\PY{p}{,} \PY{n}{cal\PYZus{}chan\PYZus{}ext}\PY{p}{,} \PY{n}{cal\PYZus{}eng\PYZus{}ext}\PY{p}{)}
@@ -602,7 +602,7 @@
 \subsection{Thickness vs.~energy}\label{thickness-vs.-energy}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{60}{\boxspacing}
+\prompt{In}{incolor}{5}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} observations}
 \PY{n}{xe} \PY{o}{=} \PY{n}{thickness}
@@ -633,7 +633,7 @@ Estimated coefficients (Vaccum):
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{64}{\boxspacing}
+\prompt{In}{incolor}{6}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} thickness\PYZus{}fitted\PYZus{}air, peak\PYZus{}energy\PYZus{}air\PYZus{}fitted = polfit(thickness, peak\PYZus{}energy\PYZus{}air, 1)}
 \PY{c+c1}{\PYZsh{} thickness\PYZus{}fitted\PYZus{}vaccum , peak\PYZus{}energy\PYZus{}vaccum\PYZus{}fitted = polfit(thickness, peak\PYZus{}energy\PYZus{}vaccum, 1)}
@@ -666,14 +666,18 @@ Estimated coefficients (Vaccum):
 \subsection{Thickness vs.~FWHM}\label{thickness-vs.-fwhm}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{62}{\boxspacing}
+\prompt{In}{incolor}{7}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{left\PYZus{}air\PYZus{}energy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{interp}\PY{p}{(}\PY{n}{left\PYZus{}air}\PY{p}{,} \PY{n}{cal\PYZus{}chan\PYZus{}ext}\PY{p}{,} \PY{n}{cal\PYZus{}eng\PYZus{}ext}\PY{p}{)}
 \PY{n}{right\PYZus{}air\PYZus{}energy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{interp}\PY{p}{(}\PY{n}{right\PYZus{}air}\PY{p}{,} \PY{n}{cal\PYZus{}chan\PYZus{}ext}\PY{p}{,} \PY{n}{cal\PYZus{}eng\PYZus{}ext}\PY{p}{)}
+\PY{n}{data\PYZus{}am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{left\PYZus{}air\PYZus{}mev}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{left\PYZus{}air\PYZus{}energy}
+\PY{n}{data\PYZus{}am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{right\PYZus{}air\PYZus{}mev}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{right\PYZus{}air\PYZus{}energy}
 \PY{n}{fwhm\PYZus{}air\PYZus{}mev} \PY{o}{=} \PY{n+nb}{abs}\PY{p}{(}\PY{n}{left\PYZus{}air\PYZus{}energy} \PY{o}{\PYZhy{}} \PY{n}{right\PYZus{}air\PYZus{}energy}\PY{p}{)}
 
 \PY{n}{left\PYZus{}vaccum\PYZus{}energy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{interp}\PY{p}{(}\PY{n}{left\PYZus{}vacc}\PY{p}{,} \PY{n}{cal\PYZus{}chan\PYZus{}ext}\PY{p}{,} \PY{n}{cal\PYZus{}eng\PYZus{}ext}\PY{p}{)}
 \PY{n}{right\PYZus{}vaccum\PYZus{}energy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{interp}\PY{p}{(}\PY{n}{right\PYZus{}vacc}\PY{p}{,} \PY{n}{cal\PYZus{}chan\PYZus{}ext}\PY{p}{,} \PY{n}{cal\PYZus{}eng\PYZus{}ext}\PY{p}{)}
+\PY{n}{data\PYZus{}am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{left\PYZus{}vac\PYZus{}mev}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{left\PYZus{}vaccum\PYZus{}energy}
+\PY{n}{data\PYZus{}am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{right\PYZus{}vac\PYZus{}mev}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{right\PYZus{}vaccum\PYZus{}energy}
 \PY{n}{fwhm\PYZus{}vaccum\PYZus{}mev} \PY{o}{=} \PY{n+nb}{abs}\PY{p}{(}\PY{n}{left\PYZus{}vaccum\PYZus{}energy} \PY{o}{\PYZhy{}} \PY{n}{right\PYZus{}vaccum\PYZus{}energy}\PY{p}{)}
 
 \PY{n}{data\PYZus{}am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{fwhm\PYZus{}air\PYZus{}mev}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{fwhm\PYZus{}air\PYZus{}mev}
@@ -690,16 +694,23 @@ Estimated coefficients (Vaccum):
 3         10         1090      1001        779        1177       724
 4         12          925       829        575        1024       537
 
-   right\_air  energy air  energy vaccum  fwhm\_air\_mev  fwhm\_vaccum\_mev
-0       1491     4.54981        4.87045       0.65316          0.88275
-1       1372     4.06687        4.32022       0.92630          0.95005
-2       1094     2.91098        3.50872       1.17173          1.55571
-3       1093     2.87139        3.22370       1.46070          1.57550
-4        925     2.19052        2.57054       1.53591          1.77739
+   right\_air  energy air  energy vaccum  left\_air\_mev  right\_air\_mev  \textbackslash{}
+0       1491     4.54981        4.87045       4.15792        4.81108
+1       1372     4.06687        4.32022       3.41371        4.34001
+2       1094     2.91098        3.50872       2.06781        3.23953
+3       1093     2.87139        3.22370       1.77487        3.23558
+4        925     2.19052        2.57054       1.03463        2.57054
+
+   left\_vac\_mev  right\_vac\_mev  fwhm\_air\_mev  fwhm\_vaccum\_mev
+0       4.23313        5.11588       0.65316          0.88275
+1       3.68289        4.63294       0.92630          0.95005
+2       2.32115        3.87686       1.17173          1.55571
+3       1.99259        3.56809       1.46070          1.57550
+4       1.18505        2.96244       1.53591          1.77739
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{65}{\boxspacing}
+\prompt{In}{incolor}{8}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} observations}
 \PY{n}{x} \PY{o}{=} \PY{n}{thickness}
@@ -751,6 +762,145 @@ Estimated coefficients (Vaccum):
     \end{center}
     { \hspace*{\fill} \\}
     
+    \hypertarget{linear-regression-table}{%
+\subsubsection{Linear regression table}\label{linear-regression-table}}
+
+    \hypertarget{energy-vs.-thickness}{%
+\paragraph{energy vs.~thickness}\label{energy-vs.-thickness}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{9}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}air} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+\PY{n}{x} \PY{o}{=} \PY{n}{thickness}
+\PY{n}{ya} \PY{o}{=} \PY{n}{peak\PYZus{}energy\PYZus{}air}
+\PY{n}{xx} \PY{o}{=} \PY{n}{thickness} \PY{o}{*} \PY{n}{thickness}
+\PY{n}{xya} \PY{o}{=} \PY{n}{thickness} \PY{o}{*} \PY{n}{ya}
+
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{y}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{ya}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xx}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xya}
+
+\PY{n+nb}{print}\PY{p}{(}
+    \PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Air regression: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+si}{\PYZob{}}\PY{n}{data\PYZus{}air}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}}
+\PY{l+s+s2}{	}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sx = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{ya}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxx= }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xx}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xya}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+
+\PY{n}{data\PYZus{}vaccum} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+
+\PY{n}{yv} \PY{o}{=} \PY{n}{peak\PYZus{}energy\PYZus{}vaccum}
+\PY{n}{xyv} \PY{o}{=} \PY{n}{thickness}\PY{o}{*}\PY{n}{yv}
+
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{y}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{yv}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xx}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xyv}
+
+\PY{n+nb}{print}\PY{p}{(}
+    \PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ Vaccum regression: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+si}{\PYZob{}}\PY{n}{data\PYZus{}vaccum}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}}
+\PY{l+s+s2}{	}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sx = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{yv}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxx= }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xx}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xyv}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Air regression:
+    x       y   xx       xy
+0   2 4.54981    4  9.09962
+1   4 4.06687   16 16.26748
+2   8 2.91098   64 23.28780
+3  10 2.87139  100 28.71390
+4  12 2.19052  144 26.28625
+
+ sx = 36,
+ sy = 16.58957,
+ sxx= 328
+ sxy = 103.65505
+
+
+ Vaccum regression:
+    x       y   xx       xy
+0   2 4.87045    4  9.74091
+1   4 4.32022   16 17.28087
+2   8 3.50872   64 28.06972
+3  10 3.22370  100 32.23700
+4  12 2.57054  144 30.84649
+
+ sx = 36,
+ sy = 18.49363,
+ sxx= 328
+ sxy = 118.17498
+    \end{Verbatim}
+
+    \hypertarget{fwhm-vs-thickness}{%
+\paragraph{fwhm vs thickness}\label{fwhm-vs-thickness}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{10}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}air} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+\PY{n}{x} \PY{o}{=} \PY{n}{thickness}
+\PY{n}{yaf} \PY{o}{=} \PY{n}{fwhm\PYZus{}air\PYZus{}mev}
+\PY{n}{xx} \PY{o}{=} \PY{n}{thickness} \PY{o}{*} \PY{n}{thickness}
+\PY{n}{xyaf} \PY{o}{=} \PY{n}{thickness} \PY{o}{*} \PY{n}{yaf}
+
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{y}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{yaf}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xx}
+\PY{n}{data\PYZus{}air}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xyaf}
+
+\PY{n+nb}{print}\PY{p}{(}
+    \PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Air regression: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+si}{\PYZob{}}\PY{n}{data\PYZus{}air}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}}
+\PY{l+s+s2}{	}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sx = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{yaf}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxx= }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xx}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xyaf}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+
+\PY{n}{data\PYZus{}vaccum} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+
+\PY{n}{yvf} \PY{o}{=} \PY{n}{fwhm\PYZus{}vaccum\PYZus{}mev}
+\PY{n}{xyvf} \PY{o}{=} \PY{n}{thickness}\PY{o}{*}\PY{n}{yvf}
+
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{y}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{yvf}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xx}
+\PY{n}{data\PYZus{}vaccum}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xyvf}
+
+\PY{n+nb}{print}\PY{p}{(}
+    \PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ Vaccum regression: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+si}{\PYZob{}}\PY{n}{data\PYZus{}vaccum}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}}
+\PY{l+s+s2}{	}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sx = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{yvf}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxx= }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xx}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ sxy = }\PY{l+s+si}{\PYZob{}}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{xyvf}\PY{p}{)}\PY{l+s+si}{:}\PY{l+s+s2}{.5f}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Air regression:
+    x       y   xx       xy
+0   2 0.65316    4  1.30632
+1   4 0.92630   16  3.70520
+2   8 1.17173   64  9.37383
+3  10 1.46070  100 14.60702
+4  12 1.53591  144 18.43097
+
+ sx = 36,
+ sy = 5.74780,
+ sxx= 328
+ sxy = 47.42333
+
+
+ Vaccum regression:
+    x       y   xx       xy
+0   2 0.88275    4  1.76551
+1   4 0.95005   16  3.80020
+2   8 1.55571   64 12.44566
+3  10 1.57550  100 15.75500
+4  12 1.77739  144 21.32862
+
+ sx = 36,
+ sy = 6.74140,
+ sxx= 328
+ sxy = 55.09499
+    \end{Verbatim}
+
 
     % Add a bibliography block to the postdoc
     
